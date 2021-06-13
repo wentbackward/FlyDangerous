@@ -15,7 +15,8 @@ namespace Engine {
         NullSpace,
         TestSpaceStation,
         TerrainV1,
-        TerrainV2
+        TerrainV2,
+        BasicCircuit
     }
 
     public enum Environment {

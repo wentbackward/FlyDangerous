@@ -19,6 +19,7 @@ namespace Menus {
         [SerializeField] private TopMenu topMenu;
         [SerializeField] private OptionsMenu optionsMenu;
         [SerializeField] private FreeRoamMenu freeRoamMenu;
+        [SerializeField] private CircuitMenu circuitMenu;
         [SerializeField] private LoadCustomMenu loadCustomMenu;
         [SerializeField] private GameObject shipMesh;
 
@@ -103,6 +104,16 @@ namespace Menus {
             topMenu.Show();
         }
 
+        public void OpenCircuitPanel() {
+            AudioManager.Instance.Play("ui-dialog-open");
+            circuitMenu.Show();
+            topMenu.Hide();
+        }
+        
+        public void CloseCircuitPanel() {
+            circuitMenu.Hide();
+            topMenu.Show();
+        }
         public void OpenOptionsPanel() {
             AudioManager.Instance.Play("ui-dialog-open");
             topMenu.Hide();
