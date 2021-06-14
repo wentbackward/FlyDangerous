@@ -26,6 +26,7 @@ public class CircuitMenu : MonoBehaviour {
     }
 
     public void Show() {
+        PopulateDropdown();
         this.gameObject.SetActive(true);
         goButton.Select();
         this._animator.SetBool("Open", true);
@@ -35,24 +36,22 @@ public class CircuitMenu : MonoBehaviour {
         _levelData = null;
     }
     
+    void PopulateDropdown ()
+    {
+        CircuitList circuits;
+        var jsonTextFile = Resources.Load<TextAsset>("Circuits/circuit-list");
+        circuits = JsonUtility.FromJson<CircuitList>(jsonTextFile.text);
+        
+        circuitSelector.ClearOptions ();
+        circuitSelector.AddOptions(circuits.circuits);
+    }
+    
     public void StartCircuit()
     {
-        String levelJson = "";
-        
-        switch (circuitSelector.value) {
-            case 0: 
-                levelJson = "{\r\n  \"version\": 1,\r\n  \"name\": \"\",\r\n  \"location\": 4,\r\n  \"environment\": 10,\r\n   \"terrainSeed\": \"\",\r\n  \"startPosition\": {\r\n    \"x\": 0,\r\n    \"y\": -100,\r\n    \"z\": 0\r\n  },\r\n  \"startRotation\": {\r\n    \"x\": 0,\r\n    \"y\": 0,\r\n    \"z\": 0\r\n  },\r\n  \"raceType\": 0,\r\n}";
-                break;
-            case 1:
-            case 2:
-            case 3:
-            case 4:
-            default:
-                levelJson = "{\r\n  \"version\": 1,\r\n  \"name\": \"\",\r\n  \"location\": 4,\r\n  \"environment\": 10,\r\n   \"terrainSeed\": \"\",\r\n  \"startPosition\": {\r\n    \"x\": 0,\r\n    \"y\": 1000,\r\n    \"z\": 0\r\n  },\r\n  \"startRotation\": {\r\n    \"x\": 0,\r\n    \"y\": 0,\r\n    \"z\": 0\r\n  },\r\n  \"raceType\": 0,\r\n}";
-                break;
-        }
-
-        _levelData ??= LevelData.FromJsonString(levelJson);
+        var jsonTextFile = Resources.Load<TextAsset>("Circuits/" + circuitSelector.captionText.text);
+        // Debug.Log("Item: " + circuitSelector.captionText.text + " : " + circuitSelector.itemText.text);
+        // TODO Report an error if we can't find the file
+        _levelData ??= LevelData.FromJsonString(jsonTextFile.text);
         Game.Instance.StartGame(_levelData);
-    }    
+    }
 }

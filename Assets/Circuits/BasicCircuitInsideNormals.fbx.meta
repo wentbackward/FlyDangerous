@@ -12,8 +12,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Blue Light PBR
+    second: {fileID: 2100000, guid: c261d03cb2c71384e803ff55ff8a6216, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete Ground
+    second: {fileID: 2100000, guid: ac2f03da897eff0409a483e46018bace, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Industrial Brick Wall
     second: {fileID: 2100000, guid: 109da9f7e8dc21449bcf97ba8a18eb69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 5b936fdcbb6147840a96476a8bd72bfe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -24,6 +39,56 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Physically Based
     second: {fileID: 2100000, guid: 8ad1893d71d86c24d84d9adc0850da52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlasticRidges
+    second: {fileID: 2100000, guid: 7b3d7241f74eecb40ae2582acf77d371, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ground_Albedo
+    second: {fileID: 2800000, guid: c93c2043e2a713645836cc290be10695, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ground_MetallicOcculusionSmoothness
+    second: {fileID: 2800000, guid: a235352e06771124a88f8a8a2285af47, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ground_Normal
+    second: {fileID: 2800000, guid: 85488c9f30f8aba468ab8b644669dce5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal_Albedo
+    second: {fileID: 2800000, guid: dd989d4a09966f84398ec421bfa30081, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal_MetallicSmoothness
+    second: {fileID: 2800000, guid: 361e5bda3d3e1e549b241696bdf0748e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal_Normal
+    second: {fileID: 2800000, guid: 32aa26a60777d9b44ad81d6345fdbc09, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlasticRidges_Albedo
+    second: {fileID: 2800000, guid: 9e125d383ecba69459ed526ab61d8069, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlasticRidges_MetallicOcculusionSmoothness
+    second: {fileID: 2800000, guid: 42298a1c65ce9e54fa4c879d0b2874c6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PlasticRidges_Normal
+    second: {fileID: 2800000, guid: c60cc6b001774504e99e77897151c7d5, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule

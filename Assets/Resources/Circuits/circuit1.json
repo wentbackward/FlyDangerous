@@ -1,0 +1,10 @@
+{
+	"version": 1,
+	"name": "circuit1",
+	"location": 4,
+	"environment": 10,
+	"terrainSeed": "",
+	"startPosition": {"x": 0, "y": -100, "z": 0},
+	"startRotation": {"x": 0, "y": 0, "z": 0},
+	"raceType": 0
+}

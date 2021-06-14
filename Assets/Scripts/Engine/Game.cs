@@ -169,6 +169,8 @@ public class Game : MonoBehaviour {
         switch (levelData.location) {
             case Location.NullSpace: location = "MapTest"; break;   // used when loading without going via the menu
             case Location.TestSpaceStation: location = "SpaceStation"; break;
+            case Location.TerrainV1: location = "TerrainV1"; break;
+            case Location.TerrainV2: location = "TerrainV2"; break;
             case Location.BasicCircuit: location = "BasicCircuit"; break;
             default: throw new Exception("Supplied map type (" + levelData.location + ") is not a valid scene.");
         }
@@ -295,6 +297,7 @@ public class Game : MonoBehaviour {
             ResetGameState();
             ApplyGraphicsOptions();
             NotifyVRStatus();
+            Resources.UnloadUnusedAssets();
             FadeFromBlack();
             FreeCursor();
         }
