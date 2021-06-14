@@ -53,9 +53,7 @@ public class Game : MonoBehaviour {
         }
     }
 
-    public bool IsTerrainMap => _levelData.location == Location.TerrainV1 ||
-                                _levelData.location == Location.TerrainV2 ||
-                                (_levelData.location.ToString().Contains("Circuit"));
+    public bool IsTerrainMap => _levelData.location == Location.TerrainV1 || _levelData.location == Location.TerrainV2;
     public string Seed => _levelData.terrainSeed;
     
     [SerializeField] private Animator crossfade;
@@ -171,8 +169,8 @@ public class Game : MonoBehaviour {
         switch (levelData.location) {
             case Location.NullSpace: location = "MapTest"; break;   // used when loading without going via the menu
             case Location.TestSpaceStation: location = "SpaceStation"; break;
-            default: location = levelData.location.ToString(); // Convert the enum to a string
-                break;
+            case Location.BasicCircuit: location = "BasicCircuit"; break;
+            default: throw new Exception("Supplied map type (" + levelData.location + ") is not a valid scene.");
         }
         
         // if terrain, include conditions
@@ -187,6 +185,7 @@ public class Game : MonoBehaviour {
             case Environment.SunsetCloudy: environment = "Sunset_Cloudy"; break;
             case Environment.NightClear: environment = "Night_Clear"; break;
             case Environment.NightCloudy: environment = "Night_Cloudy"; break;
+            case Environment.Circuits: environment = "Circuits"; break;
             default: environment = "Sunrise_Clear"; break;
         }
         

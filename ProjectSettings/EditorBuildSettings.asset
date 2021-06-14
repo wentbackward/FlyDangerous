@@ -54,11 +54,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Maps/TerrainV2.unity
     guid: 677b861e03ba3a04a939df45fc84c894
   - enabled: 1
-    path: Assets/Scenes/Circuits/BasicCircuit.unity
+    path: Assets/Scenes/Maps/BasicCircuit.unity
     guid: d08982c50f8cd5e4588eac5bfc77e474
   - enabled: 1
-    path: Assets/Scenes/Circuits/SimpleTunnelCircuit.unity
-    guid: 38ece9f6834620a42b66c4a1af993e93
+    path: Assets/Scenes/Environments/Circuits.unity
+    guid: 23377995c66aac54dbda6ab08fcce416
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a26bebc9437469845953e29ca1324922, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6b6a8ae356d8d344a90487a1cf7f0cbd, type: 2}

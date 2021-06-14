@@ -30,6 +30,7 @@ namespace Engine {
         SunsetCloudy,
         NightClear,
         NightCloudy,
+        Circuits
     }
     
     public enum RaceType {
